@@ -10,6 +10,12 @@ body {
     margin-bottom: 15px;
   }
 
+  .footer-bar {
+    background: linear-gradient(-90deg, #cecece, #868686);
+    height: 60px;
+    margin-top: 15px;
+  }
+
   .product {
     display: flex;
     flex-flow: wrap;

@@ -39,10 +39,13 @@ Vue.component('product', {
 
         <p v-show="onSale">On Sale!</p>
         
-        <button v-on:click="addToCart"
-                :disabled="inStock <= 0"
-                :class="{ disabledButton: inStock <= 0 }">Add to Cart</button>
-        <button v-on:click="removeFromCart">Remove from Cart</button>
+        <div>
+            <button v-on:click="addToCart"
+                    :disabled="inStock <= 0"
+                    :class="{ disabledButton: inStock <= 0 }">Add to Cart</button>
+
+            <button v-on:click="removeFromCart">Remove from Cart</button>
+        </div>
 
         <product-tabs :reviews="reviews"></product-tabs>
 
@@ -241,3 +244,15 @@ var app = new Vue({
     }
     
   })
+
+var footer = new Vue({
+    el: '#footerapp',
+    data: {
+        sandbox: true
+    },
+    methods: {
+        updateSandbox() {
+            this.sandbox = false
+        }
+    }
+})
