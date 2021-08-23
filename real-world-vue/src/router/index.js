@@ -15,6 +15,12 @@ const routes = [
     component: EventDetails,
   },
   {
+    path: "/categories",
+    name: "EventCategories",
+    component: () =>
+      import(/* webpackChunkName: "eventcategories" */ "../views/EventCategories.vue"),
+  },
+  {
     path: "/about",
     name: "About",
     // route level code-splitting

@@ -3,6 +3,10 @@
     <h1>{{ event.title }}</h1>
     <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
     <p>{{ event.description }}</p>
+    <p>Organized by <b>{{ event.organizer }}</b></p>
+    <router-link class="event-category" :to="{ name: 'EventCategories'}">
+      <p>{{ event.category }}</p>
+    </router-link>
   </div>
 </template>
 
@@ -27,3 +31,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.event-category {
+  color:chocolate;
+  text-decoration: none;
+}
+
+.event-category:hover {
+  transform: scale(1.01);
+  font-weight: bold;
+}
+</style>
